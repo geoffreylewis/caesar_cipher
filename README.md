@@ -10,6 +10,11 @@ Only using Python, this program will allow you to encode or decode a message usi
 
 ## Version History 
 
+**Version 0.2**  
+*5/16/2024*  
+* Added "input()" functions for various questions posed to the user.
+* Added some "if/else" statements based on the user's answers.
+
 **Version 0.1**  
 *5/15/2024*  
 * This program has just been started.
