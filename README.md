@@ -10,6 +10,12 @@ Only using Python, this program will allow you to encode or decode a message usi
 
 ## Version History 
 
+**Version 0.3**  
+*5/17/2024*  
+* Added a list containing the alphabet twice over (in order to account for large shift numbers and end letters).
+* Cleaned up some test code.
+* Created an encoding function.
+
 **Version 0.2**  
 *5/16/2024*  
 * Added "input()" functions for various questions posed to the user.
