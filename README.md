@@ -10,6 +10,10 @@ Only using Python, this program will allow you to encode or decode a message usi
 
 ## Version History 
 
+**Version 0.5**  
+*5/19/2024*  
+* Combined encryption and decryption functions into one single function.
+
 **Version 0.4**  
 *5/18/2024*  
 * Created a decoding function.
