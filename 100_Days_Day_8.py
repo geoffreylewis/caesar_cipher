@@ -27,29 +27,24 @@ if shift_number < 1 or shift_number > 25:
 alphabet_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 
                  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-# Encryption function.
-def encrypt(plaintext, num):
-    encoded_message = ""
-    for letter in plaintext:
-        plaintext_letter_position = alphabet_list.index(letter)
-        ciphertext_letter = alphabet_list[plaintext_letter_position + num]
-        encoded_message += ciphertext_letter
-    print("Here is the encoded result:\n" + encoded_message)
+# Encryption/decryption function.
+def caesar_cipher(choice, written_message, num):
+    new_message = ""
+    if choice == "encode":
+        for letter in written_message:
+            letter_position = alphabet_list.index(letter)
+            new_letter = alphabet_list[letter_position + num]
+            new_message += new_letter
+        print("Here is the encoded result:\n" + new_message)
+    elif choice == "decode":
+        for letter in written_message:
+            letter_position = alphabet_list.index(letter)
+            new_letter = alphabet_list[letter_position - num]
+            new_message += new_letter
+        print("Here is the decoded result:\n" + new_message)
 
-# Decryption function.
-def decrypt(ciphertext, num):
-    decoded_message = ""
-    for letter in ciphertext:
-        ciphertext_letter_position = alphabet_list.index(letter)
-        plaintext_letter = alphabet_list[ciphertext_letter_position - num]
-        decoded_message += plaintext_letter
-    print("Here is the decoded result:\n" + decoded_message)
-
-# Encrypt or decrypt based off the user's decision.
-if encode_or_decode_choice == "encode":
-    encrypt(plaintext = message, num = shift_number)
-elif encode_or_decode_choice == "decode":
-    decrypt(ciphertext = message, num = shift_number)
+# Calling the encryption/decryption function.
+caesar_cipher(choice = encode_or_decode_choice, written_message = message, num = shift_number)
 
 # End of program.
 print()
