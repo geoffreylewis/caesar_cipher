@@ -10,6 +10,12 @@ Only using Python, this program will allow you to encode or decode a message usi
 
 ## Version History 
 
+**Version 0.6**  
+*5/20/2024*  
+* Added "if/else" statements to encryption/decryption function that account for non-letter characters.
+* Essentially, non-letter characters will remain as they are; they won't disappear or change.
+* Created an "if" statement for the initial encode/decode choice that takes effect based off other choices. 
+
 **Version 0.5**  
 *5/19/2024*  
 * Combined encryption and decryption functions into one single function.
