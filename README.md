@@ -12,6 +12,7 @@ Only using Python, this program will allow you to encode or decode a message usi
 
 **Version 0.6**  
 *5/20/2024*  
+* Added a banner logo for the beginning of the program.
 * Added "if/else" statements to encryption/decryption function that account for non-letter characters.
 * Essentially, non-letter characters will remain as they are; they won't disappear or change.
 * Created an "if" statement for the initial encode/decode choice that takes effect based off other choices. 
@@ -49,3 +50,5 @@ Only using Python, this program will allow you to encode or decode a message usi
 ## Acknowledgements
 
 In my ongoing quest to refresh my Python skills and stay sharp, I'm working my way through the Udemy course "100 Days of Code: The Complete Python Pro Bootcamp".  Shout out to Dr. Angela Yu and Udemy.
+
+An additional shout out to whomever created the ASCII art (copied from https://replit.com/@appbrewery/caesar-cipher-4-start#art.py).
