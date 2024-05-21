@@ -21,27 +21,8 @@ a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8
               88           
 '''
 
-# Start of program.
+# Banner/logo
 print(banner_logo)
-print("Do you need to encrypt a message, or do you need to decrypt one?\n")
-
-# Choose to encrypt or decrypt.
-encode_or_decode_choice = str(input("Type \"encode\" to encrypt, or type \"decode\" to decrypt: \n").lower())
-if encode_or_decode_choice != "encode" and encode_or_decode_choice != "decode":
-    print("You don't follow instructions well, do you?")
-    exit()
-
-# Provide your plaintext or ciphertext.
-message = str(input("Type your message: \n"))
-if message == "":
-    print("You don't follow instructions well, do you?")
-    exit()
-
-# Choose the number of letters that you wish to shift everything by.
-shift_number = int(input("Type a shift number from 1 to 25: \n"))
-if shift_number < 1 or shift_number > 25:
-    print("You don't follow instructions well, do you?")
-    exit()
 
 # Alphabet list (listed twice to account for large shift numbers or end letters like "z").
 alphabet_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 
@@ -69,9 +50,42 @@ def caesar_cipher(choice, written_message, num):
                 new_message += char
         print("Here is the decoded result:\n" + new_message)
 
-# Calling the encryption/decryption function.
-caesar_cipher(choice = encode_or_decode_choice, written_message = message, num = shift_number)
+# Encasing the actual cipher process in a "while" loop for repetitive purposes.
+repeat_cipher_program = True
+while repeat_cipher_program == True:
+    # Start of program.
+    print()
+    print("Do you need to encrypt a message, or do you need to decrypt one?\n")
+
+    # Choose to encrypt or decrypt.
+    encode_or_decode_choice = str(input("Type \"encode\" to encrypt, or type \"decode\" to decrypt: \n").lower())
+    if encode_or_decode_choice != "encode" and encode_or_decode_choice != "decode":
+        print("You don't follow instructions well, do you?")
+        exit()
+
+    # Provide your plaintext or ciphertext.
+    message = str(input("Type your message: \n"))
+    if message == "":
+        print("You don't follow instructions well, do you?")
+        exit()
+
+    # Choose the number of letters that you wish to shift everything by.
+    shift_number = int(input("Type a shift number from 1 to 25: \n"))
+    if shift_number < 1 or shift_number > 25:
+        print("You don't follow instructions well, do you?")
+        exit()
+
+    # Calling the encryption/decryption function.
+    caesar_cipher(choice = encode_or_decode_choice, written_message = message, num = shift_number)
+
+    # Asking the user if they want to end the program or repeat the cipher process once more.
+    repeat_choice = str(input("Type \"yes\" if you want to go again; otherwise, type \"no\": \n").lower())
+    if repeat_choice == "no":
+        repeat_cipher_program = False
+    elif repeat_choice != "no" and repeat_choice != "yes":
+        print("You don't follow instructions well, do you?")
+        exit()
 
 # End of program.
 print()
-print("Type \"yes\" if you want to go again; otherwise, type \"no\": ") # TEST CODE
+print("Thanks for trying out the Caesar Cipher!  Farewell!")
