@@ -10,6 +10,12 @@ Only using Python, this program will allow you to encode or decode a message usi
 
 ## Version History 
 
+**Version 1.0**  
+*5/21/2024*  
+* Program is now functional.
+* Encased the cipher process in a "while" loop for repetitive purposes.
+* Moved the encryption/decryption function higher up in the code (along with the alphabet list).
+
 **Version 0.6**  
 *5/20/2024*  
 * Added a banner logo for the beginning of the program.
